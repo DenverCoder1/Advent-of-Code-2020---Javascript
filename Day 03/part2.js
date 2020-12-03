@@ -324,18 +324,23 @@ let input = `.#..#.....#....##..............
 
 let lines = input.split("\n");
 
+// changes in columns
 let slopesRight = [1, 3, 5, 7, 1];
 
+// changes in rows
 let slopesDown = [1, 1, 1, 1, 2];
 
+// tree counts
 let trees = [0, 0, 0, 0, 0];
 
+// column iterators
 let its = [0, 0, 0, 0, 0];
 
+// current line number
 let lineNum = 0;
 
 for (const line of lines) {
-  // check down 1 slopes
+  // check slopes
   for (let i = 0; i < 5; ++i) {
     // check only even rows when slope down is 2
     if (lineNum % slopesDown[i] == 0) {
@@ -351,4 +356,5 @@ for (const line of lines) {
   lineNum++;
 }
 
+// multiply all tree counts together
 console.log(trees.reduce((a, b) => a * b));
