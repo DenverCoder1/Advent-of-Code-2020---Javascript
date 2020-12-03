@@ -324,7 +324,9 @@ let input = `.#..#.....#....##..............
 
 let lines = input.split("\n");
 
-let slopes = [1, 3, 5, 7, 1];
+let slopesRight = [1, 3, 5, 7, 1];
+
+let slopesDown = [1, 1, 1, 1, 2];
 
 let trees = [0, 0, 0, 0, 0];
 
@@ -334,23 +336,19 @@ let lineNum = 0;
 
 for (const line of lines) {
   // check down 1 slopes
-  [0, 1, 2, 3].forEach((k) => {
-    if (line[its[k] % lines[0].length] == "#") {
-      trees[k]++;
+  for (let i = 0; i < 5; ++i) {
+    // check only even rows when slope down is 2
+    if (lineNum % slopesDown[i] == 0) {
+      // check if tree in path
+      if (line[its[i] % lines[0].length] == "#") {
+        trees[i]++;
+      }
+      // increment column iterators
+      its[i] += slopesRight[i];
     }
-  });
-  // increment column iterators
-  [0, 1, 2, 3].forEach((k) => {
-    its[k] += slopes[k];
-  });
-  // even numbered lines only (down 2)
-  if (lineNum % 2 == 0) {
-    if (line[its[4] % lines[0].length] == "#") {
-      trees[4]++;
-    }
-    its[4] += slopes[4];
   }
+  // increment line count
   lineNum++;
 }
 
-console.log(trees.reduce((a,b) => a*b));
+console.log(trees.reduce((a, b) => a * b));
