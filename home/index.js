@@ -1,4 +1,4 @@
-const outputConverter = "./outputConverter.js";
+const outputConverter = "./home/outputConverter.js";
 const urlTemplate = "./Day%20{daynum}/part{partnum}.js";
 
 async function loadCode(day, part) {
@@ -16,8 +16,8 @@ async function loadCode(day, part) {
         font-size: 120%;
       }
       </style>
-      <script src="./outputConverter.js"></script>
-      <script src="${urlTemplate
+      <script src="${outputConverter}"></script>
+      <script onerror="notFound()" src="${urlTemplate
         .replace("{daynum}", `${day}`.padStart(2, "0"))
         .replace("{partnum}", part)}"></script>
   </body>`;

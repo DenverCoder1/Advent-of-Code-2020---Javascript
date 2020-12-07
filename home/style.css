@@ -1,5 +1,5 @@
 body {
-  background: #2a2a2a;
+  background: #1a1a1a;
   color: white;
   font-family: "Do Hyeon", monospace;
   display: grid;
@@ -20,7 +20,7 @@ h1.title {
   position: relative;
   margin: 2em;
   border-radius: 2px 2px 0 0;
-  border-top: 2em solid rgb(56 56 56);
+  border-top: 2em solid #2a2a2a;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   width: 80vw;
   height: 240px;
@@ -72,11 +72,11 @@ button {
   font-family: monospace;
   font-size: 1.5em;
   cursor: pointer;
-  background: #81c784;
+  background: #1a1a1a;
   transition: 0.2s ease-in-out;
+  color: #ffd54f;
 }
 
 button:hover {
-  background: #4caf50;
-  transform: scale(1.2);
+  background: #2a2a2a;
 }

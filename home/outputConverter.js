@@ -5,3 +5,7 @@ console.log = function () {
   }
   document.body.appendChild(document.createElement("br"));
 };
+
+notFound = function () {
+  console.log("Coming soon...");
+};
