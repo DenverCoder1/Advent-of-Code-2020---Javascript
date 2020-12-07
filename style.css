@@ -1,0 +1,82 @@
+body {
+  background: #2a2a2a;
+  color: white;
+  font-family: "Do Hyeon", monospace;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  height: 80vh;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+h1.title {
+  font-weight: 400;
+}
+
+.console {
+  position: relative;
+  margin: 2em;
+  border-radius: 2px 2px 0 0;
+  border-top: 2em solid rgb(56 56 56);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  width: 80vw;
+  height: 240px;
+}
+
+.console:before {
+  content: "";
+  width: 0.5em;
+  height: 0.5em;
+  position: absolute;
+  top: -1.25em;
+  right: 4em;
+  border-radius: 50%;
+  background-color: #FFD54F;
+  box-shadow: 0 0 0 2px #FFD54F, 1.5em 0 0 2px #81c784, 3em 0 0 2px #E57373;
+}
+
+.console:after {
+  content: attr(data-label);
+  position: absolute;
+  top: -1.65em;
+  left: 1em;
+}
+
+.console > * {
+  display: block;
+}
+
+iframe {
+  width: 100%;
+  border: none;
+  margin: 0;
+  background: black;
+  height: 100%;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  border-radius: 50%;
+  border: none;
+  width: 2.2em;
+  height: 2.2em;
+  margin: 0.3em;
+  font-family: monospace;
+  font-size: 1.5em;
+  cursor: pointer;
+  background: #81c784;
+  transition: 0.2s ease-in-out;
+}
+
+button:hover {
+  background: #4caf50;
+  transform: scale(1.2);
+}
