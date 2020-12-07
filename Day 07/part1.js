@@ -619,15 +619,14 @@ function checkBagContainsGold(bags, bag) {
     return true;
   }
   // check inner bags
-  let innerBagContainsGold = false;
   for (const innerBag of bags[bag]) {
     // check if inner bag contains gold bag
     if (checkBagContainsGold(bags, innerBag)) {
-      innerBagContainsGold = true;
+      return true;
     }
   }
-  // if any inner bags contain gold, return true, otherwise false
-  return innerBagContainsGold;
+  // none of the inner bags contain gold
+  return false;
 }
 
 for (const bag in bags) {
