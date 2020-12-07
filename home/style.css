@@ -34,12 +34,12 @@ h1.title {
   top: -1.25em;
   right: 4em;
   border-radius: 50%;
-  background-color: #FFD54F;
-  box-shadow: 0 0 0 2px #FFD54F, 1.5em 0 0 2px #81c784, 3em 0 0 2px #E57373;
+  background-color: #ffd54f;
+  box-shadow: 0 0 0 2px #ffd54f, 1.5em 0 0 2px #81c784, 3em 0 0 2px #e57373;
 }
 
 .console:after {
-  content: attr(data-label);
+  content: attr(aria-label);
   position: absolute;
   top: -1.65em;
   left: 1em;
@@ -47,6 +47,39 @@ h1.title {
 
 .console > * {
   display: block;
+}
+
+input.tab {
+  height: 0;
+  margin: 0;
+}
+
+input.tab:before {
+  content: attr(aria-label);
+  color: white;
+  font-family: "Do Hyeon", system-ui, monospace;
+  line-height: 2.25em;
+  padding-left: 1.25em;
+  position: absolute;
+  top: -2.2em;
+  left: 6em;
+  width: 5em;
+  height: 0em;
+  border-bottom: 2.2em solid #313131;
+  border-radius: 6px 6px 0 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+input.tab:nth-of-type(2):before {
+  position: absolute;
+  top: -2.2em;
+  left: 12em;
+}
+
+input.tab:checked:before {
+  border-bottom: 2.2em solid black;
+  z-index: 2;
 }
 
 iframe {

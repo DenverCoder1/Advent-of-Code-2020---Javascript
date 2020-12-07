@@ -199,6 +199,8 @@ let a = `1728
 1072
 1893`;
 
+console.log("Part 2\n------\n");
+
 let nums = a.split("\n");
 
 let remaining1 = {};

@@ -199,14 +199,16 @@ let a = `1728
 1072
 1893`;
 
+console.log("Part 1\n------\n");
+
 let nums = a.split("\n");
 
 map = {};
 
 for (const num of nums) {
   if (map[2020 - num]) {
-    console.log(num, 2020 - num);
-    console.log(num * (2020 - num));
+    console.log(num, "*", 2020 - num, "=", num * (2020 - num));
+    break;
   }
   map[num] = 1;
 }

@@ -15,7 +15,12 @@
   <div class="wrapper">
     <h1 class="title">Advent of Code 2020</h1>
     <div class="buttons"></div>
-    <div class="console" data-label="cmd.exe">
+    <!-- Console window -->
+    <div class="console" aria-label="cmd.exe">
+      <!-- Tabs -->
+      <input type="radio" name="tab" aria-label="Part 1" class="tab" checked>
+      <input type="radio" name="tab" aria-label="Part 2" class="tab">
+      <!-- Console output -->
       <iframe></iframe>
     </div>
   </div>

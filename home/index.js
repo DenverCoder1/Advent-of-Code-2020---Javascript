@@ -1,8 +1,12 @@
 const outputConverter = "./home/outputConverter.js";
 const urlTemplate = "./Day%20{daynum}/part{partnum}.js";
 
-async function loadCode(day, part) {
+function loadCode(day) {
   const oldIframes = Array.from(document.querySelectorAll("iframe"));
+  const part = document
+    .querySelector("input[name=tab]:checked")
+    .getAttribute("aria-label")
+    .replace(/[^\d]+/g, "");
   oldIframes.forEach((iframe) => {
     iframe.parentNode.removeChild(iframe);
   });
@@ -22,29 +26,43 @@ async function loadCode(day, part) {
         .replace("{partnum}", part)}"></script>
   </body>`;
   const console = document.querySelector(".console");
-  console.setAttribute("data-label", `Day ${day}`);
+  console.setAttribute("aria-label", `Day ${day}`);
   console.appendChild(iframe);
   iframe.contentWindow.document.open();
   iframe.contentWindow.document.write(html);
   iframe.contentWindow.document.close();
 }
 
+function changeTab() {
+  const day = document
+    .querySelector(".console")
+    .getAttribute("aria-label")
+    .replace(/[^\d]+/g, "");
+  loadCode(day);
+}
+
 window.addEventListener(
   "load",
   function () {
+    // calculate number of days to show
     let daysOfAdvent = Math.min(
       Math.ceil((new Date() - new Date("2020-12-1")) / 1000 / 60 / 60 / 24),
       25
     );
     loadCode(daysOfAdvent, 1);
+    // create buttons
     for (let i = 1; i <= daysOfAdvent; i++) {
       let button = document.createElement("button");
       button.innerText = i;
       button.onclick = function () {
-        loadCode(i, 1);
+        loadCode(i);
       };
       document.querySelector(".buttons").appendChild(button);
     }
+    // add listeners to tabs
+    Array.from(document.querySelectorAll("input[name=tab]")).forEach((tab) => {
+      tab.addEventListener("click", changeTab, false);
+    });
   },
   false
 );
