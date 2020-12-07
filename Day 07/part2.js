@@ -593,10 +593,6 @@ dark maroon bags contain 5 drab bronze bags, 4 bright red bags, 1 posh cyan bag.
 wavy red bags contain 2 mirrored beige bags, 5 muted crimson bags, 5 vibrant orange bags, 3 posh turquoise bags.
 drab brown bags contain 1 faded tan bag, 3 vibrant maroon bags.`;
 
-function func(string) {
-  
-}
-
 let lines = input.split("\n");
 
 bags = {};
