@@ -16,26 +16,31 @@ h1.title {
   font-weight: 400;
 }
 
+/* top of console window */
 .console {
   position: relative;
-  margin: 2em;
+  margin: 2em auto;
   border-radius: 2px 2px 0 0;
   border-top: 2em solid #2a2a2a;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   width: 80vw;
-  height: 240px;
+  height: 260px;
+  max-width: 640px;
 }
 
-.console:before {
-  content: "";
-  width: 0.5em;
-  height: 0.5em;
-  position: absolute;
-  top: -1.25em;
-  right: 4em;
-  border-radius: 50%;
-  background-color: #ffd54f;
-  box-shadow: 0 0 0 2px #ffd54f, 1.5em 0 0 2px #81c784, 3em 0 0 2px #e57373;
+/* window control "buttons" */
+@media only screen and (min-width: 410px) {
+  .console:before {
+    content: "";
+    width: 0.5em;
+    height: 0.5em;
+    position: absolute;
+    top: -1.25em;
+    right: 5.5em;
+    border-radius: 50%;
+    box-shadow: 1.5em 0 0 2px #ffd54f, 3em 0 0 2px #81c784,
+      4.5em 0 0 2px #e57373;
+  }
 }
 
 .console:after {
@@ -66,7 +71,7 @@ input.tab:before {
   width: 5em;
   height: 0em;
   border-bottom: 2.2em solid #313131;
-  border-radius: 6px 6px 0 0;
+  border-radius: 8px 8px 0 0;
   z-index: 1;
   cursor: pointer;
 }
@@ -94,6 +99,8 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 800px;
+  margin: auto;
 }
 
 button {
