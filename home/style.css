@@ -121,6 +121,7 @@ button {
   background: #1a1a1a;
   transition: 0.2s ease-in-out;
   color: #ffd54f;
+  outline: none;
 }
 
 button.active,
