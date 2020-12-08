@@ -11,7 +11,7 @@ function loadCode(day) {
     iframe.parentNode.removeChild(iframe);
   });
   let iframe = document.createElement("iframe");
-  const html = `<body>
+  const html = `<head>
       <style>
       body {
         background: black;
@@ -21,11 +21,13 @@ function loadCode(day) {
       }
       </style>
       <script src="${outputConverter}"></script>
+      <script onerror="notFound()" src="${urlTemplate
+          .replace("{daynum}", `${day}`.padStart(2, "0"))
+          .replace("{partnum}", part)}" defer></script>
+  </head>
+  <body>
       Part ${part}<br/>
       ------<br/><br/>
-      <script onerror="notFound()" src="${urlTemplate
-        .replace("{daynum}", `${day}`.padStart(2, "0"))
-        .replace("{partnum}", part)}"></script>
   </body>`;
   const console = document.querySelector(".console");
   console.setAttribute("aria-label", `Day ${day}`);
