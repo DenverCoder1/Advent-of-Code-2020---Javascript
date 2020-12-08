@@ -123,6 +123,7 @@ button {
   color: #ffd54f;
 }
 
+button.active,
 button:hover {
   background: #2a2a2a;
 }

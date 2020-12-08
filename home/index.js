@@ -51,16 +51,25 @@ window.addEventListener(
       Math.ceil((new Date() - new Date("2020-12-1")) / 1000 / 60 / 60 / 24),
       25
     );
-    loadCode(daysOfAdvent, 1);
     // create buttons
     for (let i = 1; i <= daysOfAdvent; i++) {
       let button = document.createElement("button");
       button.innerText = i;
       button.onclick = function () {
         loadCode(i);
+        // toggle active button
+        Array.from(document.querySelectorAll("button.active")).forEach((btn) => {
+          btn.classList.remove("active");
+        });
+        this.classList.add("active");
       };
+      if (i == 1) {
+        button.classList.add("active");
+      }
       document.querySelector(".buttons").appendChild(button);
     }
+    // load code at start
+    loadCode(1, 1);
     // add listeners to tabs
     Array.from(document.querySelectorAll("input[name=tab]")).forEach((tab) => {
       tab.addEventListener("click", changeTab, false);
