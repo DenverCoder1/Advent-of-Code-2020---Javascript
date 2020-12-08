@@ -55,12 +55,15 @@ window.addEventListener(
     for (let i = 1; i <= daysOfAdvent; i++) {
       let button = document.createElement("button");
       button.innerText = i;
+      button.setAttribute("aria-label", `Day ${i}`);
       button.onclick = function () {
         loadCode(i);
         // toggle active button
-        Array.from(document.querySelectorAll("button.active")).forEach((btn) => {
-          btn.classList.remove("active");
-        });
+        Array.from(document.querySelectorAll("button.active")).forEach(
+          (btn) => {
+            btn.classList.remove("active");
+          }
+        );
         this.classList.add("active");
       };
       if (i == 1) {
