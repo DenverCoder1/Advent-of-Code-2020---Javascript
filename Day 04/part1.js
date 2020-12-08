@@ -1163,4 +1163,4 @@ for (const line of lines) {
   }
 }
 
-console.log(count);
+console.log("Valid passports: ", count);

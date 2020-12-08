@@ -2105,4 +2105,4 @@ for (const group of groups) {
   count += countUnique(group);
 }
 
-console.log(count);
+console.log("Sum of unique questions answered 'yes' per group:\n\n", count);

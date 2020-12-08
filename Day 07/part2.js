@@ -624,4 +624,4 @@ function countInnerBags(bags, bag) {
   return innerBags;
 }
 
-console.log(countInnerBags(bags, "shiny gold"));
+console.log("Bags inside a shiny gold bag: ", countInnerBags(bags, "shiny gold"));

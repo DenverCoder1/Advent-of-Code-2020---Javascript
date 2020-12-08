@@ -915,4 +915,4 @@ for (const line of lines) {
   }
 }
 
-console.log(highestSeatId);
+console.log("Highest seat ID:", highestSeatId);

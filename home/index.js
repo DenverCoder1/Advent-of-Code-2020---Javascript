@@ -21,6 +21,8 @@ function loadCode(day) {
       }
       </style>
       <script src="${outputConverter}"></script>
+      Part ${part}<br/>
+      ------<br/><br/>
       <script onerror="notFound()" src="${urlTemplate
         .replace("{daynum}", `${day}`.padStart(2, "0"))
         .replace("{partnum}", part)}"></script>

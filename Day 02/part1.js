@@ -1017,4 +1017,4 @@ for (const line of pws) {
   }
 }
 
-console.log(valid);
+console.log("Number of valid passwords:", valid);

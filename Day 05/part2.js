@@ -916,7 +916,7 @@ for (const line of lines) {
 for (const seatId in found) {
   const seatNum = Number(seatId);
   if (!found[seatNum + 1] && found[seatNum + 2]) {
-    console.log(seatNum + 1);
+    console.log("Your seat:", seatNum + 1);
     break;
   }
 }

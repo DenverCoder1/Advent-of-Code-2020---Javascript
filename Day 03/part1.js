@@ -335,4 +335,4 @@ for (const line of lines) {
   col+=3;
 }
 
-console.log(trees);
+console.log("Number of trees hit:", trees);

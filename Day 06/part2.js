@@ -2109,4 +2109,4 @@ for (const group of groups) {
   count += countInCommon(group);
 }
 
-console.log(count);
+console.log("Sum of unique questions answered 'yes' by all in group:\n\n", count);

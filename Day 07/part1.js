@@ -634,4 +634,4 @@ for (const bag in bags) {
   count += checkBagContainsGold(bags, bag) ? 1 : 0;
 }
 
-console.log(count);
+console.log("Ways to have a bag containing shiny gold:", count);

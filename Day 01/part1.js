@@ -199,8 +199,6 @@ let a = `1728
 1072
 1893`;
 
-console.log("Part 1\n------\n");
-
 let nums = a.split("\n");
 
 map = {};

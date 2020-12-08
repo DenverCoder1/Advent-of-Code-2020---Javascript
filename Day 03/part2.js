@@ -357,4 +357,5 @@ for (const line of lines) {
 }
 
 // multiply all tree counts together
-console.log(trees.reduce((a, b) => a * b));
+let output = trees.join(" * ") + " = " + trees.reduce((a, b) => a * b);
+console.log(output);

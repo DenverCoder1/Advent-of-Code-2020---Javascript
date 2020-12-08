@@ -199,8 +199,6 @@ let a = `1728
 1072
 1893`;
 
-console.log("Part 2\n------\n");
-
 let nums = a.split("\n");
 
 let remaining1 = {};
@@ -212,8 +210,15 @@ for (var i = 0; i < nums.length; i++) {
     remaining2[j] = remaining1[i] - nums[j];
     for (var k = j + 1; k < nums.length; k++) {
       if (nums[k] == remaining2[j]) {
-        console.log(nums[i], nums[j], nums[k]);
-        console.log(nums[i] * nums[j] * nums[k]);
+        console.log(
+          nums[i],
+          "*",
+          nums[j],
+          "*",
+          nums[k],
+          "=",
+          nums[i] * nums[j] * nums[k]
+        );
       }
     }
   }
