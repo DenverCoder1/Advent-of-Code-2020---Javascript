@@ -1,8 +1,16 @@
-# Advent-of-Code-2020---JavaScript
+# Advent of Code 2020 - JavaScript
 
 [adventofcode.com](https://adventofcode.com/)
 
 Advent of Code 2020 Solutions in JavaScript
+
+## Run solutions in my online AoC console!
+
+My AoC Console: https://git.io/aoc-console 
+
+**[⬆ Upvote this craft submission](https://www.reddit.com/r/adventofcode/comments/k4emxn/advent_of_code_2020_craft_submissions_megathread/gf06uej)**
+
+## About me
 
 By Jonah Lawrence
 
