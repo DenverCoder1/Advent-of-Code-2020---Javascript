@@ -5,7 +5,7 @@ body {
   display: grid;
   place-items: center;
   margin: 0;
-  height: 80vh;
+  height: 95vh;
 }
 
 .wrapper {
@@ -14,6 +14,12 @@ body {
 
 h1.title {
   font-weight: 400;
+}
+
+a.github {
+  color: #ffd54f;
+  font-size: 108%;
+  line-height: 3em;  
 }
 
 /* top of console window */
