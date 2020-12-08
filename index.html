@@ -2,11 +2,20 @@
 <html lang="en">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z255K8GWFG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Z255K8GWFG');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Advent of Code 2020</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
   <script src="./home/index.js"></script>
   <link rel="stylesheet" href="./home/style.css">
 </head>
@@ -18,8 +27,8 @@
     <!-- Console window -->
     <div class="console" aria-label="cmd.exe">
       <!-- Tabs -->
-      <input type="radio" name="tab" aria-label="Part 1" class="tab" id="part1" checked><label for="part1" data-text="Part 1"></label>
-      <input type="radio" name="tab" aria-label="Part 2" class="tab" id="part2"><label for="part2" data-text="Part 2"></label>
+      <input type="radio" name="tab" class="tab" id="part1" checked><label for="part1" aria-label="Part 1"></label>
+      <input type="radio" name="tab" class="tab" id="part2"><label for="part2" aria-label="Part 2"></label>
       <!-- Console output -->
       <iframe></iframe>
     </div>

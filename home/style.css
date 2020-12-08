@@ -1,7 +1,7 @@
 body {
   background: #1a1a1a;
   color: white;
-  font-family: "Do Hyeon", monospace;
+  font-family: "Overpass", monospace;
   display: grid;
   place-items: center;
   margin: 0;
@@ -19,7 +19,7 @@ h1.title {
 a.github {
   color: #ffd54f;
   font-size: 108%;
-  line-height: 3em;  
+  line-height: 3em;
 }
 
 /* top of console window */
@@ -54,6 +54,7 @@ a.github {
   position: absolute;
   top: -1.65em;
   left: 1em;
+  font-size: 92%;
 }
 
 .console > * {
@@ -61,18 +62,18 @@ a.github {
 }
 
 input.tab {
-  display:none;
+  display: none;
 }
 
 input.tab + label:before {
-  content: attr(data-text);
+  content: attr(aria-label);
   color: white;
-  font-family: "Do Hyeon", system-ui, monospace;
-  line-height: 2.2em;
+  font-family: inherit;
+  line-height: 2.25em;
   padding-right: 1em;
   position: absolute;
-  top: -2.2em;
-  left: 5.5em;
+  top: -2.25em;
+  left: 5.6em;
   width: 5em;
   height: 0em;
   border-bottom: 3em solid #313131;
@@ -84,7 +85,7 @@ input.tab + label:before {
 
 input.tab:nth-of-type(2) + label:before {
   position: absolute;
-  left: 11.2em;
+  left: 11.4em;
 }
 
 input.tab:checked + label:before {

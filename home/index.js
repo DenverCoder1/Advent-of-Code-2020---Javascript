@@ -5,8 +5,7 @@ function loadCode(day) {
   const oldIframes = Array.from(document.querySelectorAll("iframe"));
   const part = document
     .querySelector("input[name=tab]:checked")
-    .getAttribute("aria-label")
-    .replace(/[^\d]+/g, "");
+    .id.replace(/[^\d]+/g, "");
   oldIframes.forEach((iframe) => {
     iframe.parentNode.removeChild(iframe);
   });
@@ -22,8 +21,8 @@ function loadCode(day) {
       </style>
       <script src="${outputConverter}"></script>
       <script onerror="notFound()" src="${urlTemplate
-          .replace("{daynum}", `${day}`.padStart(2, "0"))
-          .replace("{partnum}", part)}" defer></script>
+        .replace("{daynum}", `${day}`.padStart(2, "0"))
+        .replace("{partnum}", part)}" defer></script>
   </head>
   <body>
       Part ${part}<br/>
