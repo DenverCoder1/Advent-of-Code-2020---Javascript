@@ -61,35 +61,34 @@ a.github {
 }
 
 input.tab {
-  height: 0;
-  margin: 0;
+  display:none;
 }
 
-input.tab:before {
-  content: attr(aria-label);
+input.tab + label:before {
+  content: attr(data-text);
   color: white;
   font-family: "Do Hyeon", system-ui, monospace;
-  line-height: 2.25em;
-  padding-left: 1.25em;
+  line-height: 2.2em;
+  padding-right: 1em;
   position: absolute;
   top: -2.2em;
-  left: 6em;
+  left: 5.5em;
   width: 5em;
   height: 0em;
-  border-bottom: 2.2em solid #313131;
-  border-radius: 8px 8px 0 0;
+  border-bottom: 3em solid #313131;
+  border-radius: 8px;
   z-index: 1;
   cursor: pointer;
+  font-size: 83%;
 }
 
-input.tab:nth-of-type(2):before {
+input.tab:nth-of-type(2) + label:before {
   position: absolute;
-  top: -2.2em;
-  left: 12em;
+  left: 11.2em;
 }
 
-input.tab:checked:before {
-  border-bottom: 2.2em solid black;
+input.tab:checked + label:before {
+  border-bottom: 3em solid black;
   z-index: 2;
 }
 
@@ -99,6 +98,8 @@ iframe {
   margin: 0;
   background: black;
   height: 100%;
+  z-index: 99;
+  position: relative;
 }
 
 .buttons {
