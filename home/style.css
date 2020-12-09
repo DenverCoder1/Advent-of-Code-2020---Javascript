@@ -35,18 +35,16 @@ a.github {
 }
 
 /* window control "buttons" */
-@media only screen and (min-width: 410px) {
-  .console:before {
-    content: "";
-    width: 0.5em;
-    height: 0.5em;
-    position: absolute;
-    top: -1.25em;
-    right: 5.5em;
-    border-radius: 50%;
-    box-shadow: 1.5em 0 0 2px #ffd54f, 3em 0 0 2px #81c784,
-      4.5em 0 0 2px #e57373;
-  }
+.console:before {
+  content: "";
+  width: 0.5em;
+  height: 0.5em;
+  position: absolute;
+  top: -1.25em;
+  right: 5.5em;
+  border-radius: 50%;
+  box-shadow: 1.5em 0 0 2px #ffd54f, 3em 0 0 2px #81c784,
+    4.5em 0 0 2px #e57373;
 }
 
 .console:after {
