@@ -92,8 +92,7 @@ window.addEventListener(
     for (let i = 1; i <= daysOfAdvent; i++) {
       let button = document.createElement("button");
       button.innerText = i;
-      button.setAttribute("aria-label", `Day ${i}`);
-      button.title = titles[i - 1];
+      button.setAttribute("aria-label", titles[i - 1]);
       button.onclick = function () {
         loadCode(i);
         // toggle active button

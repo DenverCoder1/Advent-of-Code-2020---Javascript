@@ -73,7 +73,7 @@ input.tab + label:before {
   padding-right: 1em;
   position: absolute;
   top: -2.25em;
-  left: 5.6em;
+  left: 0.4em;
   width: 5em;
   height: 0em;
   border-bottom: 3em solid #222222;
@@ -86,7 +86,7 @@ input.tab + label:before {
 
 input.tab:nth-of-type(2) + label:before {
   position: absolute;
-  left: 11.4em;
+  left: 6.2em;
 }
 
 input.tab:checked + label:before {
@@ -144,7 +144,7 @@ button:hover {
 
 /* bubble */
 .buttons button:before {
-  content: attr(title);
+  content: attr(aria-label);
   height: auto;
   width: auto;
   position: absolute;
