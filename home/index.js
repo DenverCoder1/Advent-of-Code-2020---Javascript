@@ -1,11 +1,40 @@
 const outputConverter = "./home/outputConverter.js";
 const urlTemplate = "./Day%20{daynum}/part{partnum}.js";
+const titles = [
+  "Day 1: Report Repair",
+  "Day 2: Password Philosophy",
+  "Day 3: Toboggan Trajectory",
+  "Day 4: Passport Processing",
+  "Day 5: Binary Boarding",
+  "Day 6: Custom Customs",
+  "Day 7: Handy Haversacks",
+  "Day 8: Handheld Halting",
+  "Day 9: Encoding Error",
+  "Day 10",
+  "Day 11",
+  "Day 12",
+  "Day 13",
+  "Day 14",
+  "Day 15",
+  "Day 16",
+  "Day 17",
+  "Day 18",
+  "Day 19",
+  "Day 20",
+  "Day 21",
+  "Day 22",
+  "Day 23",
+  "Day 24",
+  "Day 25",
+];
 
 function loadCode(day) {
-  const oldIframes = Array.from(document.querySelectorAll("iframe"));
   const part = document
     .querySelector("input[name=tab]:checked")
     .id.replace(/[^\d]+/g, "");
+  const title = titles[day - 1];
+  const titleLength = titles[day - 1].length;
+  const oldIframes = Array.from(document.querySelectorAll("iframe"));
   oldIframes.forEach((iframe) => {
     iframe.parentNode.removeChild(iframe);
   });
@@ -25,8 +54,15 @@ function loadCode(day) {
         .replace("{partnum}", part)}" defer></script>
   </head>
   <body>
-      Part ${part}<br/>
-      ------<br/><br/>
+  <pre>
+  _____${"_".repeat(titleLength)}_____
+ / \\    ${" ".repeat(titleLength)}    \\
+ \\_,| -- ${title} -- |
+    |    ${" ".repeat(titleLength)}    |
+    |${" ".repeat(titleLength/2)} Part ${part} ${" ".repeat(Math.ceil(titleLength/2))}|
+    |  ___${"_".repeat(titleLength)}___|__
+    \\_/____${"_".repeat(titleLength)}____/
+  </pre>
   </body>`;
   const console = document.querySelector(".console");
   console.setAttribute("aria-label", `Day ${day}`);
@@ -57,6 +93,7 @@ window.addEventListener(
       let button = document.createElement("button");
       button.innerText = i;
       button.setAttribute("aria-label", `Day ${i}`);
+      button.title = titles[i - 1];
       button.onclick = function () {
         loadCode(i);
         // toggle active button
