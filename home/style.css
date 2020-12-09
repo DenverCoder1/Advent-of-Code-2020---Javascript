@@ -111,7 +111,8 @@ iframe {
   flex-wrap: wrap;
   justify-content: center;
   max-width: 800px;
-  margin: auto;
+  margin: 1em auto 1em auto;
+  padding: 1em;
 }
 
 button {
