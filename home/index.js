@@ -48,6 +48,10 @@ function loadCode(day) {
         font-size: 120%;
         overflow-wrap: anywhere;
       }
+      pre {
+        white-space: pre-wrap;
+        word-break: break-all;
+      }
       </style>
       <script src="${outputConverter}"></script>
       <script onerror="notFound()" src="${urlTemplate
@@ -60,7 +64,9 @@ function loadCode(day) {
  / \\    ${" ".repeat(titleLength)}    \\
  \\_,| -- ${title} -- |
     |    ${" ".repeat(titleLength)}    |
-    |${" ".repeat(titleLength/2)} Part ${part} ${" ".repeat(Math.ceil(titleLength/2))}|
+    |${" ".repeat(titleLength / 2)} Part ${part} ${" ".repeat(
+    Math.ceil(titleLength / 2)
+  )}|
     |  ___${"_".repeat(titleLength)}___|__
     \\_/____${"_".repeat(titleLength)}____/
   </pre>
