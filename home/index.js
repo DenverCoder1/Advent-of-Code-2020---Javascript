@@ -46,6 +46,7 @@ function loadCode(day) {
         font-family: monospace;
         color: white;
         font-size: 120%;
+        overflow-wrap: anywhere;
       }
       </style>
       <script src="${outputConverter}"></script>
