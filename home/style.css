@@ -26,7 +26,7 @@ a.github {
   resize: both;
   overflow: hidden;
   margin: 2em auto;
-  width: clamp(80vw, 640px, 640px);
+  width: min(80vw, 640px);
   height: 260px;
 }
 
