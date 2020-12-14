@@ -28,4 +28,4 @@ console.log("First bus:", firstBus);
 
 console.log("Wait:", wait)
 
-console.log("Product:", 787*6);
+console.log("Product:", firstBus * wait);
